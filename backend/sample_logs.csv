@@ -1,0 +1,174 @@
+timestamp,source,device,level,message
+2026-09-12 10:00:01,PostgreSQL,db-cluster-node1,FATAL,FATAL: database system is shutting down; connection refused for user admin
+2026-09-12 10:00:03,PostgreSQL,db-cluster-node2,FATAL,FATAL: database system is shutting down; connection refused for user reporting_app
+2026-09-12 10:00:05,PostgreSQL,db-cluster-node1,ERROR,ERROR: connection to server at 192.168.1.50 port 5432 failed: Connection timed out
+2026-09-12 10:00:08,PostgreSQL,db-cluster-node2,ERROR,ERROR: connection to server at 192.168.1.51 port 5432 failed: Connection timed out
+2026-09-12 10:00:10,PostgreSQL,db-cluster-node3,ERROR,ERROR: connection to server at 192.168.1.52 port 5432 failed: Connection timed out
+2026-09-12 10:00:12,PostgreSQL,db-cluster-node1,ERROR,ERROR: connection to server at 192.168.1.55 port 5432 failed: Connection timed out
+2026-09-12 10:00:15,PostgreSQL,db-cluster-node2,ERROR,ERROR: connection to server at 192.168.1.58 port 5432 failed: Connection timed out
+2026-09-12 10:00:18,PostgreSQL,db-cluster-node3,ERROR,ERROR: connection to server at 192.168.1.60 port 5432 failed: Connection timed out
+2026-09-12 10:00:20,PostgreSQL,db-cluster-node1,ERROR,ERROR: deadlock detected; process 14209 waiting for ExclusiveLock on relation orders
+2026-09-12 10:00:22,PostgreSQL,db-cluster-node2,ERROR,ERROR: deadlock detected; process 14210 waiting for ExclusiveLock on relation orders
+2026-09-12 10:00:25,PostgreSQL,db-cluster-node1,ERROR,ERROR: deadlock detected; process 15830 waiting for ExclusiveLock on relation payments
+2026-09-12 10:00:28,PostgreSQL,db-cluster-node2,ERROR,ERROR: deadlock detected; process 15831 waiting for ExclusiveLock on relation payments
+2026-09-12 10:00:30,PostgreSQL,db-cluster-node3,ERROR,ERROR: deadlock detected; process 16904 waiting for ExclusiveLock on relation inventory
+2026-09-12 10:00:32,PostgreSQL,db-cluster-node1,FATAL,FATAL: password authentication failed for user app_user from 10.0.4.15
+2026-09-12 10:00:35,PostgreSQL,db-cluster-node2,FATAL,FATAL: password authentication failed for user app_user from 10.0.4.18
+2026-09-12 10:00:38,PostgreSQL,db-cluster-node3,FATAL,FATAL: password authentication failed for user billing_srv from 10.0.4.22
+2026-09-12 10:00:40,PostgreSQL,db-cluster-node1,FATAL,FATAL: password authentication failed for user analytics from 10.0.4.25
+2026-09-12 10:00:45,PostgreSQL,db-cluster-node2,INFO,LOG: duration: 245.12ms statement: SELECT * FROM orders WHERE id = 884102
+2026-09-12 10:00:48,PostgreSQL,db-cluster-node1,INFO,LOG: duration: 312.40ms statement: SELECT * FROM payments WHERE id = 120491
+2026-09-12 10:00:50,PostgreSQL,db-cluster-node3,INFO,LOG: duration: 189.50ms statement: SELECT * FROM users WHERE id = 551023
+2026-09-12 10:01:00,Nginx,web-proxy-01,INFO,"172.16.0.4 - - [12/Sep/2026:10:01:00 +0000] ""GET /api/v1/users HTTP/1.1"" 200 4512 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:01:02,Nginx,web-proxy-01,INFO,"172.16.0.10 - - [12/Sep/2026:10:01:02 +0000] ""GET /api/v1/products HTTP/1.1"" 200 8920 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:01:04,Nginx,web-proxy-02,INFO,"172.16.0.15 - - [12/Sep/2026:10:01:04 +0000] ""GET /api/v1/orders HTTP/1.1"" 200 6210 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:01:06,Nginx,web-proxy-01,INFO,"172.16.0.19 - - [12/Sep/2026:10:01:06 +0000] ""GET /api/v1/health HTTP/1.1"" 200 48 ""-"" ""Kube-Probe/1.25"""
+2026-09-12 10:01:08,Nginx,web-proxy-02,INFO,"172.16.0.22 - - [12/Sep/2026:10:01:08 +0000] ""GET /api/v1/health HTTP/1.1"" 200 48 ""-"" ""Kube-Probe/1.25"""
+2026-09-12 10:01:10,Nginx,web-proxy-01,INFO,"172.16.0.31 - - [12/Sep/2026:10:01:10 +0000] ""GET /api/v1/cart HTTP/1.1"" 200 3180 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:01:12,Nginx,web-proxy-02,WARN,"172.16.0.88 - - [12/Sep/2026:10:01:12 +0000] ""GET /admin/config.php HTTP/1.1"" 404 162 ""-"" ""Python-urllib/3.9"""
+2026-09-12 10:01:15,Nginx,web-proxy-01,WARN,"172.16.0.91 - - [12/Sep/2026:10:01:15 +0000] ""GET /wp-login.php HTTP/1.1"" 404 162 ""-"" ""curl/7.68.0"""
+2026-09-12 10:01:18,Nginx,web-proxy-02,WARN,"172.16.0.95 - - [12/Sep/2026:10:01:18 +0000] ""GET /.env HTTP/1.1"" 404 162 ""-"" ""Go-http-client/1.1"""
+2026-09-12 10:01:20,Nginx,web-proxy-01,WARN,"172.16.0.99 - - [12/Sep/2026:10:01:20 +0000] ""GET /.git/config HTTP/1.1"" 404 162 ""-"" ""curl/7.68.0"""
+2026-09-12 10:01:22,Nginx,web-proxy-02,WARN,"172.16.0.104 - - [12/Sep/2026:10:01:22 +0000] ""GET /phpmyadmin/index.php HTTP/1.1"" 404 162 ""-"" ""Python-urllib/3.9"""
+2026-09-12 10:01:25,Nginx,web-proxy-02,ERROR,"172.16.0.12 - - [12/Sep/2026:10:01:25 +0000] ""POST /api/v1/checkout HTTP/1.1"" 500 1204 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:01:28,Nginx,web-proxy-01,ERROR,"172.16.0.14 - - [12/Sep/2026:10:01:28 +0000] ""POST /api/v1/checkout HTTP/1.1"" 502 584 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:01:30,Nginx,web-proxy-02,ERROR,"172.16.0.20 - - [12/Sep/2026:10:01:30 +0000] ""POST /api/v1/checkout HTTP/1.1"" 500 1204 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:01:32,Nginx,web-proxy-01,ERROR,"172.16.0.24 - - [12/Sep/2026:10:01:32 +0000] ""POST /api/v1/payments HTTP/1.1"" 502 584 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:01:35,Nginx,web-proxy-02,ERROR,"172.16.0.28 - - [12/Sep/2026:10:01:35 +0000] ""POST /api/v1/payments HTTP/1.1"" 500 1204 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:01:38,Nginx,web-proxy-01,WARN,"172.16.0.65 - - [12/Sep/2026:10:01:38 +0000] ""GET /api/v1/search HTTP/1.1"" 429 210 ""-"" ""RateLimitPolicy"""
+2026-09-12 10:01:40,Nginx,web-proxy-02,WARN,"172.16.0.68 - - [12/Sep/2026:10:01:40 +0000] ""GET /api/v1/search HTTP/1.1"" 429 210 ""-"" ""RateLimitPolicy"""
+2026-09-12 10:02:00,Cisco-ASR,edge-router-01,WARN,%LINK-3-UPDOWN: Interface GigabitEthernet0/0/1 changed state to down
+2026-09-12 10:02:03,Cisco-ASR,edge-router-01,INFO,%LINK-3-UPDOWN: Interface GigabitEthernet0/0/1 changed state to up
+2026-09-12 10:02:05,Cisco-ASR,edge-router-01,WARN,%LINK-3-UPDOWN: Interface GigabitEthernet0/0/2 changed state to down
+2026-09-12 10:02:08,Cisco-ASR,edge-router-01,INFO,%LINK-3-UPDOWN: Interface GigabitEthernet0/0/2 changed state to up
+2026-09-12 10:02:10,Cisco-ASR,edge-router-02,WARN,%LINK-3-UPDOWN: Interface GigabitEthernet0/0/3 changed state to down
+2026-09-12 10:02:12,Cisco-ASR,edge-router-02,INFO,%LINK-3-UPDOWN: Interface GigabitEthernet0/0/3 changed state to up
+2026-09-12 10:02:15,Cisco-ASR,edge-router-02,ERROR,%BGP-5-NBR_RESET: Neighbor 10.254.0.1 reset (BGP Notification sent: hold time expired)
+2026-09-12 10:02:18,Cisco-ASR,edge-router-02,ERROR,%BGP-5-NBR_RESET: Neighbor 10.254.0.2 reset (BGP Notification sent: hold time expired)
+2026-09-12 10:02:20,Cisco-ASR,edge-router-01,ERROR,%BGP-5-NBR_RESET: Neighbor 10.254.0.5 reset (BGP Notification sent: hold time expired)
+2026-09-12 10:02:22,Cisco-ASR,edge-router-02,ERROR,%BGP-5-NBR_RESET: Neighbor 10.254.0.8 reset (BGP Notification sent: hold time expired)
+2026-09-12 10:02:25,Cisco-ASR,core-switch-01,CRITICAL,%FIREWALL-4-PACKET_DROP: SYN flood protection triggered on interface eth0 from 198.51.100.44
+2026-09-12 10:02:28,Cisco-ASR,core-switch-01,CRITICAL,%FIREWALL-4-PACKET_DROP: SYN flood protection triggered on interface eth0 from 198.51.100.45
+2026-09-12 10:02:30,Cisco-ASR,core-switch-02,CRITICAL,%FIREWALL-4-PACKET_DROP: SYN flood protection triggered on interface eth1 from 198.51.100.58
+2026-09-12 10:02:32,Cisco-ASR,core-switch-02,CRITICAL,%FIREWALL-4-PACKET_DROP: SYN flood protection triggered on interface eth1 from 198.51.100.62
+2026-09-12 10:03:00,AuthService,auth-node-01,SECURITY,Failed password for invalid user admin from 192.0.2.100 port 44102 ssh2
+2026-09-12 10:03:02,AuthService,auth-node-01,SECURITY,Failed password for invalid user admin from 192.0.2.100 port 44104 ssh2
+2026-09-12 10:03:04,AuthService,auth-node-01,SECURITY,Failed password for invalid user root from 192.0.2.100 port 44106 ssh2
+2026-09-12 10:03:06,AuthService,auth-node-02,SECURITY,Failed password for invalid user root from 192.0.2.101 port 51200 ssh2
+2026-09-12 10:03:08,AuthService,auth-node-02,SECURITY,Failed password for invalid user test from 192.0.2.102 port 48110 ssh2
+2026-09-12 10:03:10,AuthService,auth-node-01,SECURITY,Failed password for invalid user oracle from 192.0.2.103 port 48115 ssh2
+2026-09-12 10:03:12,AuthService,auth-node-01,SECURITY,Failed password for invalid user postgres from 192.0.2.104 port 48120 ssh2
+2026-09-12 10:03:15,AuthService,auth-node-01,SECURITY,Failed password for user guest from 192.0.2.105 port 44110 ssh2
+2026-09-12 10:03:18,AuthService,auth-node-02,SECURITY,Failed password for user support from 192.0.2.106 port 44115 ssh2
+2026-09-12 10:03:20,AuthService,auth-node-01,SECURITY,Failed password for user operator from 192.0.2.107 port 44120 ssh2
+2026-09-12 10:03:25,AuthService,auth-node-01,INFO,Accepted publickey for deploy_user from 10.0.1.5 port 38920 ssh2: RSA SHA256:abcd1234efgh5678
+2026-09-12 10:03:28,AuthService,auth-node-02,INFO,Accepted publickey for deploy_user from 10.0.1.6 port 38922 ssh2: RSA SHA256:abcd1234efgh5678
+2026-09-12 10:03:30,AuthService,auth-node-01,INFO,Accepted publickey for ci_runner from 10.0.1.8 port 38925 ssh2: RSA SHA256:99887766aabbccdd
+2026-09-12 10:03:32,AuthService,auth-node-02,INFO,Accepted publickey for ci_runner from 10.0.1.9 port 38928 ssh2: RSA SHA256:99887766aabbccdd
+2026-09-12 10:03:35,AuthService,auth-node-01,SECURITY,User account locked after 5 consecutive failed login attempts: user admin
+2026-09-12 10:03:38,AuthService,auth-node-02,SECURITY,User account locked after 5 consecutive failed login attempts: user operator
+2026-09-12 10:04:00,Kernel,app-worker-01,CRITICAL,Out of memory: Kill process 28419 (java) score 850 or sacrifice child
+2026-09-12 10:04:02,Kernel,app-worker-02,CRITICAL,Out of memory: Kill process 29104 (python) score 910 or sacrifice child
+2026-09-12 10:04:05,Kernel,app-worker-01,CRITICAL,Out of memory: Kill process 30122 (node) score 890 or sacrifice child
+2026-09-12 10:04:08,Kernel,app-worker-03,CRITICAL,Out of memory: Kill process 31405 (postgres) score 940 or sacrifice child
+2026-09-12 10:04:10,Kernel,app-worker-02,CRITICAL,Out of memory: Kill process 32180 (redis-server) score 880 or sacrifice child
+2026-09-12 10:04:15,Kernel,app-worker-01,WARN,EXT4-fs warning (device sda1): ext4_lookup: deleted inode referenced: 40912
+2026-09-12 10:04:18,Kernel,app-worker-02,WARN,EXT4-fs warning (device sdb1): ext4_lookup: deleted inode referenced: 40918
+2026-09-12 10:04:20,Kernel,app-worker-03,WARN,EXT4-fs warning (device nvme0n1p2): ext4_lookup: deleted inode referenced: 51204
+2026-09-12 10:04:22,Kernel,app-worker-01,WARN,EXT4-fs warning (device sda1): ext4_lookup: deleted inode referenced: 51209
+2026-09-12 10:04:25,Kernel,app-worker-01,WARN,High disk I/O utilization detected on mount /var/log: 94% threshold exceeded
+2026-09-12 10:04:28,Kernel,app-worker-02,WARN,High disk I/O utilization detected on mount /var/log: 96% threshold exceeded
+2026-09-12 10:04:30,Kernel,app-worker-03,WARN,High disk I/O utilization detected on mount /data: 92% threshold exceeded
+2026-09-12 10:04:32,Kernel,app-worker-01,WARN,High disk I/O utilization detected on mount /var/lib/docker: 95% threshold exceeded
+2026-09-12 10:04:35,Kernel,app-worker-01,INFO,systemd[1]: Service worker-queue.service restarted successfully after failure
+2026-09-12 10:04:38,Kernel,app-worker-02,INFO,systemd[1]: Service worker-queue.service restarted successfully after failure
+2026-09-12 10:04:40,Kernel,app-worker-03,INFO,systemd[1]: Service payment-processor.service restarted successfully after failure
+2026-09-12 10:04:42,Kernel,app-worker-01,INFO,systemd[1]: Service telemetry-agent.service restarted successfully after failure
+2026-09-12 10:04:45,Kernel,app-worker-02,WARN,CPU throttling active on cgroup /system.slice/worker-queue.service: quota exceeded by 18%
+2026-09-12 10:04:48,Kernel,app-worker-03,WARN,CPU throttling active on cgroup /system.slice/data-indexer.service: quota exceeded by 24%
+2026-09-12 10:05:00,Kubernetes,k8s-node-worker-01,ERROR,Readiness probe failed: HTTP probe to http://10.244.1.45:8080/healthz failed with statuscode: 503
+2026-09-12 10:05:03,Kubernetes,k8s-node-worker-02,ERROR,Readiness probe failed: HTTP probe to http://10.244.2.18:8080/healthz failed with statuscode: 503
+2026-09-12 10:05:05,Kubernetes,k8s-node-worker-01,ERROR,Readiness probe failed: HTTP probe to http://10.244.1.88:9090/healthz failed with statuscode: 503
+2026-09-12 10:05:08,Kubernetes,k8s-node-worker-03,ERROR,Readiness probe failed: HTTP probe to http://10.244.3.12:8080/healthz failed with statuscode: 503
+2026-09-12 10:05:10,Kubernetes,k8s-node-worker-01,WARN,Back-off restarting failed container order-processor in pod order-processor-78f9db948-4x2lm namespace prod
+2026-09-12 10:05:12,Kubernetes,k8s-node-worker-02,WARN,Back-off restarting failed container order-processor in pod order-processor-78f9db948-9kj7b namespace prod
+2026-09-12 10:05:15,Kubernetes,k8s-node-worker-03,WARN,Back-off restarting failed container inventory-sync in pod inventory-sync-56b4f7678-mn3kl namespace prod
+2026-09-12 10:05:18,Kubernetes,k8s-node-worker-01,WARN,Back-off restarting failed container notification-svc in pod notification-svc-67d8e4321-pl89x namespace staging
+2026-09-12 10:05:20,Kubernetes,k8s-node-master-01,INFO,Successfully assigned prod/checkout-service-84c679fd9b-5v9kx to k8s-node-worker-01 by default-scheduler
+2026-09-12 10:05:22,Kubernetes,k8s-node-master-01,INFO,Successfully assigned prod/payment-gateway-78c992ab3c-8m2kp to k8s-node-worker-02 by default-scheduler
+2026-09-12 10:05:25,Kubernetes,k8s-node-master-01,INFO,Successfully assigned prod/user-auth-64b5478fed-2x7lp to k8s-node-worker-03 by default-scheduler
+2026-09-12 10:05:28,Kubernetes,k8s-node-master-01,INFO,Successfully assigned staging/frontend-web-59c8789fed-3h4mn to k8s-node-worker-01 by default-scheduler
+2026-09-12 10:05:30,Kubernetes,k8s-node-worker-01,CRITICAL,OOMKilled: container payment-gateway in pod payment-gateway-78c992ab3c-8m2kp terminated with exit code 137
+2026-09-12 10:05:32,Kubernetes,k8s-node-worker-02,CRITICAL,OOMKilled: container cache-worker in pod cache-worker-55b8812fea-4x9mn terminated with exit code 137
+2026-09-12 10:05:35,Kubernetes,k8s-node-worker-03,CRITICAL,OOMKilled: container report-generator in pod report-generator-44c1198fdb-2p1lk terminated with exit code 137
+2026-09-12 10:05:38,Kubernetes,k8s-node-worker-01,ERROR,"MountVolume.SetUp failed for volume ""vault-tls-secret"": secret ""vault-tls-certs"" not found"
+2026-09-12 10:05:40,Kubernetes,k8s-node-worker-02,ERROR,"MountVolume.SetUp failed for volume ""db-credentials"": secret ""postgres-prod-secret"" not found"
+2026-09-12 10:05:42,Kubernetes,k8s-node-worker-03,ERROR,"MountVolume.SetUp failed for volume ""api-tokens"": secret ""jwt-signing-key"" not found"
+2026-09-12 10:06:00,Redis,redis-master-01,ERROR,Redis: OOM command not allowed when used memory > 'maxmemory' on key session:token:990142
+2026-09-12 10:06:03,Redis,redis-master-01,ERROR,Redis: OOM command not allowed when used memory > 'maxmemory' on key cache:user:884102
+2026-09-12 10:06:05,Redis,redis-master-01,ERROR,Redis: OOM command not allowed when used memory > 'maxmemory' on key cart:items:551023
+2026-09-12 10:06:08,Redis,redis-master-01,ERROR,Redis: OOM command not allowed when used memory > 'maxmemory' on key telemetry:stream:120491
+2026-09-12 10:06:10,Redis,redis-replica-01,WARN,Redis: Connecting to master replication stream at 10.0.8.20:6379 failed: Connection refused
+2026-09-12 10:06:12,Redis,redis-replica-02,WARN,Redis: Connecting to master replication stream at 10.0.8.20:6379 failed: Connection refused
+2026-09-12 10:06:15,Redis,redis-replica-01,WARN,Redis: Connecting to master replication stream at 10.0.8.21:6379 failed: Connection refused
+2026-09-12 10:06:20,Kafka,kafka-broker-01,WARN,Kafka: Consumer group order-processing-group rebalance triggered for topic orders-events
+2026-09-12 10:06:22,Kafka,kafka-broker-02,WARN,Kafka: Consumer group payment-processing-group rebalance triggered for topic payments-events
+2026-09-12 10:06:25,Kafka,kafka-broker-03,WARN,Kafka: Consumer group inventory-sync-group rebalance triggered for topic inventory-events
+2026-09-12 10:06:28,Kafka,kafka-broker-01,WARN,Kafka: Consumer group audit-log-group rebalance triggered for topic security-audit
+2026-09-12 10:06:30,Kafka,kafka-broker-01,ERROR,Kafka: Fetch session failed: LeaderNotAvailableException for partition 0 on topic orders-events
+2026-09-12 10:06:32,Kafka,kafka-broker-02,ERROR,Kafka: Fetch session failed: LeaderNotAvailableException for partition 1 on topic payments-events
+2026-09-12 10:06:35,Kafka,kafka-broker-03,ERROR,Kafka: Fetch session failed: LeaderNotAvailableException for partition 2 on topic telemetry-events
+2026-09-12 10:06:40,Security-WAF,waf-gateway-01,SECURITY,WAF alert: SQL injection attempt detected in query parameter from 198.51.100.88: ' OR 1=1 --
+2026-09-12 10:06:42,Security-WAF,waf-gateway-01,SECURITY,"WAF alert: SQL injection attempt detected in query parameter from 198.51.100.92: UNION SELECT username,password FROM users"
+2026-09-12 10:06:45,Security-WAF,waf-gateway-02,SECURITY,WAF alert: SQL injection attempt detected in query parameter from 198.51.100.95: admin' --
+2026-09-12 10:06:48,Security-WAF,waf-gateway-02,SECURITY,WAF alert: SQL injection attempt detected in query parameter from 198.51.100.99: '; DROP TABLE customers; --
+2026-09-12 10:06:50,Security-WAF,waf-gateway-01,SECURITY,WAF alert: Cross-site scripting (XSS) attempt detected in POST payload from 198.51.100.105: <script>alert(1)</script>
+2026-09-12 10:07:00,Hardware,datacenter-node-09,CRITICAL,Hardware ECC uncorrectable multi-bit memory error detected on DIMM_A1 bank 0
+2026-09-12 10:07:05,Hardware,datacenter-node-14,CRITICAL,Power supply unit PSU-2 input voltage drop below 190V threshold on rack 4B
+2026-09-12 10:07:10,Kernel,compute-node-22,FATAL,Kernel panic - not syncing: Fatal exception in interrupt at RIP 0xffffffff810d23a1
+2026-09-12 10:07:15,PostgreSQL,db-cluster-node4,CRITICAL,Corrupted WAL segment file header detected at LSN 0/14B29A0 in pg_wal/000000010000000000000014
+2026-09-12 10:07:20,PostgreSQL,db-cluster-node1,INFO,LOG: checkpoint starting: time
+2026-09-12 10:07:25,PostgreSQL,db-cluster-node1,INFO,"LOG: checkpoint complete: wrote 892 buffers (5.4%); 0 WAL file(s) added, 0 removed, 2 recycled"
+2026-09-12 10:07:30,PostgreSQL,db-cluster-node2,INFO,LOG: checkpoint starting: time
+2026-09-12 10:07:35,PostgreSQL,db-cluster-node2,INFO,"LOG: checkpoint complete: wrote 744 buffers (4.5%); 0 WAL file(s) added, 0 removed, 1 recycled"
+2026-09-12 10:07:40,PostgreSQL,db-cluster-node3,WARN,LOG: autovacuum: VACUUM ANALYZE public.audit_logs (to prevent wraparound) took 4.12s
+2026-09-12 10:07:45,PostgreSQL,db-cluster-node1,WARN,LOG: autovacuum: VACUUM ANALYZE public.sessions (to prevent wraparound) took 2.85s
+2026-09-12 10:08:00,Kubernetes,k8s-node-worker-01,INFO,"Pulling image ""registry.internal.net/apps/checkout-service:v2.14.0"""
+2026-09-12 10:08:05,Kubernetes,k8s-node-worker-01,INFO,"Successfully pulled image ""registry.internal.net/apps/checkout-service:v2.14.0"" in 4.82s"
+2026-09-12 10:08:10,Kubernetes,k8s-node-worker-02,INFO,"Pulling image ""registry.internal.net/apps/payment-gateway:v1.9.2"""
+2026-09-12 10:08:15,Kubernetes,k8s-node-worker-02,INFO,"Successfully pulled image ""registry.internal.net/apps/payment-gateway:v1.9.2"" in 5.11s"
+2026-09-12 10:08:20,Kubernetes,k8s-node-worker-03,INFO,Created container user-auth in pod user-auth-64b5478fed-2x7lp
+2026-09-12 10:08:22,Kubernetes,k8s-node-worker-03,INFO,Started container user-auth in pod user-auth-64b5478fed-2x7lp
+2026-09-12 10:08:25,Kubernetes,k8s-node-worker-01,INFO,Created container checkout-service in pod checkout-service-84c679fd9b-5v9kx
+2026-09-12 10:08:28,Kubernetes,k8s-node-worker-01,INFO,Started container checkout-service in pod checkout-service-84c679fd9b-5v9kx
+2026-09-12 10:08:35,Kubernetes,k8s-node-worker-02,WARN,Node k8s-node-worker-02 status is now: NodeHasDiskPressure
+2026-09-12 10:08:40,Kubernetes,k8s-node-worker-03,WARN,Node k8s-node-worker-03 status is now: NodeHasMemoryPressure
+2026-09-12 10:09:00,AuthService,auth-node-01,SECURITY,sudo: deploy_user : TTY=pts/0 ; PWD=/home/deploy_user ; USER=root ; COMMAND=/bin/systemctl restart nginx
+2026-09-12 10:09:05,AuthService,auth-node-02,SECURITY,sudo: deploy_user : TTY=pts/1 ; PWD=/home/deploy_user ; USER=root ; COMMAND=/bin/systemctl reload postgresql
+2026-09-12 10:09:10,AuthService,auth-node-01,SECURITY,sudo: admin_svc : TTY=pts/2 ; PWD=/home/admin_svc ; USER=root ; COMMAND=/usr/bin/docker system prune -f
+2026-09-12 10:09:15,AuthService,auth-node-01,WARN,PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.0.2.140 user=root
+2026-09-12 10:09:20,AuthService,auth-node-02,WARN,PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.0.2.145 user=admin
+2026-09-12 10:09:25,AuthService,auth-node-01,SECURITY,Received disconnect from 192.0.2.150 port 52140:11: Bye Bye [preauth]
+2026-09-12 10:09:30,AuthService,auth-node-02,SECURITY,Received disconnect from 192.0.2.155 port 52144:11: Bye Bye [preauth]
+2026-09-12 10:10:00,Kernel,compute-node-01,ERROR,traps: order-worker[24810] general protection fault ip:7f8a12903410 sp:7ffde8209800 error:0 in libc.so.6
+2026-09-12 10:10:05,Kernel,compute-node-02,ERROR,traps: sync-service[29140] general protection fault ip:7f9b23104520 sp:7ffdf9310910 error:0 in libpthread.so.0
+2026-09-12 10:10:10,Kernel,compute-node-03,ERROR,traps: queue-consumer[31201] general protection fault ip:7fa145205630 sp:7ffca1421020 error:0 in libc.so.6
+2026-09-12 10:10:15,Kernel,app-worker-01,INFO,TCP: request_sock_TCP: Possible SYN flooding on port 443. Sending cookies. Check SNMP counters.
+2026-09-12 10:10:20,Kernel,app-worker-02,INFO,TCP: request_sock_TCP: Possible SYN flooding on port 443. Sending cookies. Check SNMP counters.
+2026-09-12 10:10:25,Kernel,app-worker-03,WARN,Clock: NTP clock skew detected: offset 142ms exceeds warning threshold
+2026-09-12 10:11:00,Nginx,web-proxy-01,INFO,"172.16.0.40 - - [12/Sep/2026:10:11:00 +0000] ""GET /api/v1/notifications HTTP/1.1"" 200 1420 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:11:02,Nginx,web-proxy-02,INFO,"172.16.0.45 - - [12/Sep/2026:10:11:02 +0000] ""GET /api/v1/metrics HTTP/1.1"" 200 4890 ""-"" ""Prometheus/2.40"""
+2026-09-12 10:11:05,Nginx,web-proxy-01,INFO,"172.16.0.50 - - [12/Sep/2026:10:11:05 +0000] ""GET /api/v1/metrics HTTP/1.1"" 200 4912 ""-"" ""Prometheus/2.40"""
+2026-09-12 10:11:10,Nginx,web-proxy-02,ERROR,"172.16.0.55 - - [12/Sep/2026:10:11:10 +0000] ""POST /api/v1/inventory/deduct HTTP/1.1"" 500 1204 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:11:12,Nginx,web-proxy-01,ERROR,"172.16.0.58 - - [12/Sep/2026:10:11:12 +0000] ""POST /api/v1/inventory/deduct HTTP/1.1"" 502 584 ""-"" ""Mozilla/5.0"""
+2026-09-12 10:11:15,Nginx,web-proxy-02,WARN,"172.16.0.110 - - [12/Sep/2026:10:11:15 +0000] ""GET /swagger-ui.html HTTP/1.1"" 404 162 ""-"" ""Go-http-client/1.1"""
+2026-09-12 10:11:18,Nginx,web-proxy-01,WARN,"172.16.0.115 - - [12/Sep/2026:10:11:18 +0000] ""GET /actuator/env HTTP/1.1"" 404 162 ""-"" ""curl/7.68.0"""
+2026-09-12 10:11:25,Security-WAF,waf-gateway-01,SECURITY,WAF alert: Path traversal directory traversal probe from 198.51.100.120: /../../../../etc/passwd
+2026-09-12 10:11:30,Security-WAF,waf-gateway-02,SECURITY,WAF alert: Path traversal directory traversal probe from 198.51.100.125: /..%2F..%2F..%2Fetc%2Fshadow
+2026-09-12 10:11:35,Security-WAF,waf-gateway-01,SECURITY,"WAF alert: SQL injection attempt detected in query parameter from 198.51.100.130: 1' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.TABLES GROUP BY x)a)--"
+2026-09-12 10:11:40,Redis,redis-master-01,INFO,DB 0: 450123 keys (18204 volatile) in 524288 slots. Cache hit ratio: 98.4%
+2026-09-12 10:11:45,Redis,redis-master-01,INFO,DB 0: 452890 keys (18450 volatile) in 524288 slots. Cache hit ratio: 98.6%
+2026-09-12 10:11:50,Kafka,kafka-broker-02,INFO,Kafka: Partition orders-events-0 high watermark updated to offset 8912405
+2026-09-12 10:11:55,Kafka,kafka-broker-03,INFO,Kafka: Partition payments-events-1 high watermark updated to offset 5401923
+2026-09-12 10:12:00,Hardware,datacenter-node-03,CRITICAL,Temperature sensor CPU_DIE_0 reached thermal threshold 98.5C; throttling initiated
+2026-09-12 10:12:05,Hardware,datacenter-node-07,CRITICAL,Cooling fan FAN_CHASSIS_3 RPM dropped to 0; hardware fan failure detected

@@ -1,0 +1,16 @@
+# Python
+backend/.venv/
+backend/__pycache__/
+*.py[cod]
+
+# Node.js
+frontend/node_modules/
+frontend/dist/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Editor settings
+.vscode/
